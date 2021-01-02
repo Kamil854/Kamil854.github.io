@@ -16,11 +16,8 @@ savedTodos = JSON.parse(localStorage.getItem('todos'));
 if (savedTodos.length > 0){
   console.log(savedTodos.length);
   console.log('trying to create');
-  for(x=0;x<savedTodos.length;x++){
-
-    recreateTodos(savedTodos[x]);
-    console.log('created value at' + savedTodos[x]);
-    }
+  savedTodos.forEach(element => recreateTodos(element));
+ 
 }
 
 
