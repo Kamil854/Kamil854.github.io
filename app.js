@@ -11,8 +11,13 @@ todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click',deleteCheck);
 filterOption.addEventListener('click',filterTodo);
 
+let todos;
+if(localStorage.getItem('todos') === null){
+  savedTodos = [];
+} else{
+  savedTodows = JSON.parse(localStorage.getItem('todos'));
+}
 
-savedTodos = JSON.parse(localStorage.getItem('todos'));
 if (savedTodos.length > 0){
   console.log(savedTodos.length);
   console.log('trying to create');
