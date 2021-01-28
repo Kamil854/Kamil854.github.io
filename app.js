@@ -15,7 +15,7 @@ let todos;
 if(localStorage.getItem('todos') === null){
   savedTodos = [];
 } else{
-  savedTodows = JSON.parse(localStorage.getItem('todos'));
+  savedTodos = JSON.parse(localStorage.getItem('todos'));
 }
 
 if (savedTodos.length > 0){
