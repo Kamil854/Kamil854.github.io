@@ -14,6 +14,9 @@ filterOption.addEventListener('click',filterTodo);
 let todos;
 if(localStorage.getItem('todos') === null){
   savedTodos = [];
+  //create localstorage
+  localStorage.setItem('todos',JSON.stringify(savedTodos));
+  
 } else{
   savedTodos = JSON.parse(localStorage.getItem('todos'));
 }
